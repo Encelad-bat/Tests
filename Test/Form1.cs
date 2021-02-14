@@ -12,6 +12,7 @@ namespace Test
 {
     public partial class Form1 : Form
     {
+        int id = 0;
         private List<string> questions = new List<string>()
         {
             "Economics would be closed from world.",
@@ -33,7 +34,36 @@ namespace Test
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
+            Button next = new Button();
+            Button prev = new Button();
+            next.Size = new Size(20, 10);
+            prev.Size = new Size(20, 10);
 
+
+            next.Location = new Point(10, this.Height - (10 + this.Height));
+            prev.Location = new Point(20 + next.Width, this.Height - (10 + this.Height));
+
+            next.Click += Next_Click;
+            prev.Click += Prev_Click;
+
+            if(id != 9)
+            {
+                this.Controls.Add(next);
+            }
+            if(id != 0)
+            {
+                this.Controls.Add(prev);
+            }
+        }
+
+        private void Prev_Click(object sender, EventArgs e)
+        {
+            id--;
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            id++;
         }
     }
 }
