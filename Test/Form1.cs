@@ -32,44 +32,6 @@ namespace Test
             InitializeComponent();
         }
 
-        private void QuestionShow(int id)
-        {
-            this.Controls.Clear();
-            Label label = new Label();
-            Panel panel = new Panel();
-
-            panel.BackColor = Color.White;
-            for (int i = 0; i < 4; i++)
-            {
-                RadioButton button = new RadioButton();
-                if (i == 0)
-                {
-                    button.BackColor = Color.LightGreen;
-                    button.Text = "++";
-                }
-                else if (i == 1)
-                {
-                    button.BackColor = Color.LightGreen;
-                    button.Text = "+";
-                }
-                else if (i == 2)
-                {
-                    button.BackColor = Color.LightGreen;
-                    button.Text = "-";
-                }
-                else if (i == 3)
-                {
-                    button.BackColor = Color.LightGreen;
-                    button.Text = "--";
-                }
-                panel.Controls.Add(button);
-            }
-            label.Text = questions[id - 1];
-            label.Location = new Point(this.Size.Width - label.Width, 10);
-            panel.Location = new Point(this.Size.Width - label.Width, 20 + label.Height);
-            this.Controls.Add(panel);
-        }
-
         private void Form1_Load(object sender, System.EventArgs e)
         {
             Button next = new Button();
