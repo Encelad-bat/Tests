@@ -12,6 +12,19 @@ namespace Test
 {
     public partial class Form1 : Form
     {
+        private List<string> questions = new List<string>()
+        {
+            "Economics would be closed from world.",
+            "Author right must disapear.",
+            "In country would be one national language.",
+            "Culture would be telling about greatness of country.",
+            "Freedom is bad for people.",
+            "Country must be controled by one person.",
+            "Social rights would be only on men.",
+            "Travelling is forbidden.",
+            "In country must be one currency.",
+            "All people have they own minimal payment.",
+        };
 
         public Form1()
         {
